@@ -3,11 +3,11 @@
 #include <iostream>
 using namespace std;
 
-int binarysearch(int arr[], int n, int k)// pass array, size, and key as parameter
+int binarysearch(int arr[], int s,int e, int k)// pass array, size, and key as parameter
 {
     int start, end, mid; //define start, end and mid as int
-    start = 0;// starts from index 0
-    end = n - 1; // ends from size - 1 
+    start = s;// starts from index 0
+    end = e; // ends from size - 1 
     while (start <= end) // while start is less than, equals to end repeat ->
     {
         mid = (start + end)/2; // 1. FIND MID POINT
@@ -28,12 +28,13 @@ int binarysearch(int arr[], int n, int k)// pass array, size, and key as paramet
     return -1; // NOT FOUND SO RETURN 0
 }
 
-int main()
-{
-    int arr1[5] = {1, 2, 3, 4, 5};
-    int size = 5;
-    int key = 4;
-    int result = binarysearch(arr1, size, key);
-    cout << "element found! at: " << result << endl;
-    return 0;
-}
+// int main()
+// {
+//     int arr1[5] = {1, 2, 3, 4, 5};
+//     int s=0;
+//     int e = 4;
+//     int key = 4;
+//     int result = binarysearch(arr1, s,e, key);
+//     cout << "element found! at: " << result << endl;
+//     return 0;
+// }
