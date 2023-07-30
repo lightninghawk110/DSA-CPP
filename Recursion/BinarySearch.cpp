@@ -1,16 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool binarySearch( int *arr, int s, int e, int k )
+int binarySearch( int *arr, int s, int e, int k )
 {
      if ( s > e ) // base case
      {
-        return false;
+        return -1;
      }
      int mid  = s + (e-s)/2;
      if (arr[mid] ==k) // first element is our searching element
      {
-        return true;
+        return mid;
      }
      if (arr[mid] < k)
      {
@@ -30,13 +30,7 @@ int main()
     int s = 0;
     int e = n-1;
     int k = 2;
-    if (binarySearch(arr,s,e,k))
-    {
-        cout << "Element Found" << endl;
-    }
-    else
-    {
-        cout << " not found" << endl;
-    }
+    int ans = binarySearch(arr,s,e,k);
+
     
 }
