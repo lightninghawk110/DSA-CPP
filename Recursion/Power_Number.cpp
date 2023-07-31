@@ -6,7 +6,7 @@ using namespace std;
 
 class Solution{
     public:
-    //You need to complete this fucntion
+    //You need to complete this function
     int mod=1000000007;
     long long power(int N,int R)
     {
