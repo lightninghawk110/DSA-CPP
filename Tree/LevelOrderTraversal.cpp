@@ -48,6 +48,32 @@ void levelorderTraversal(node *root)
 
     }
 }
+
+//using vector -- GFG code
+ vector<int> levelOrder(node* n)
+    {
+      node * temp;
+      queue <node *> q;
+      vector<int> v;
+      q.push(n);
+      while(!q.empty())
+      {
+          temp = q.front();
+          q.pop();
+          v.push_back(temp->data);
+          if(temp->left)
+          {
+              q.push(temp->left);
+          }
+          if(temp->right)
+          {
+              q.push(temp->right);
+          }
+      }
+      
+      return v;
+      
+    }
 int main()
 {
     node *root = NULL;
