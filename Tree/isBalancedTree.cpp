@@ -104,11 +104,11 @@ struct Node
 class Solution{
     public:
     //Function to check whether a binary tree is balanced or not.
-    pair<bool,int> isBalancedFast (Node* root)
+    pair<bool,int> isBalancedFast (Node* root)      
     {
         if(root == NULL)
         {
-            pair<bool,int> p = make_pair(true,0);
+            pair<bool,int> p = make_pair(true,0); 
             return p;
             
         }
