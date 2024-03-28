@@ -5,9 +5,9 @@ int maximumProfit(vector<int> &prices){
     int n = prices.size();
     for(int i=1;i<n;i++)
     {
-        cost = a[i]-mini;
+       int  cost = prices[i]-mini;
         profit = max(profit,cost);
-        mini = min(mini,price[i]);
+        mini = min(mini,prices[i]);
     }
 
     return profit;
