@@ -6,7 +6,6 @@ def noOfCarries(num1,num2):
         rem1 = num1%10
         rem2 = num2%10
         sum = rem1+rem2 + carry
-        print(sum)
         if(sum >9):
             carry =  sum // 10
             count = count+1
@@ -17,6 +16,6 @@ def noOfCarries(num1,num2):
         
     return count
 
-n1 = 451
-n2 = 349
+n1 = 5451
+n2 = 549
 print("count = ",noOfCarries(n1,n2))
