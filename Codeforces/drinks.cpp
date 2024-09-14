@@ -10,12 +10,9 @@ int main(int argc, char const *argv[])
     for (short i = 0; i < t; i++)
     {
         scanf("%hd", &arr[i]);
-    }
-    for (short i = 0; i < t; i++)
-    {
         sum+=arr[i];
     }
-
+    
     answer = (float)sum/t;
     
     printf("%.4f", answer);
