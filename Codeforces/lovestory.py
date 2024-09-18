@@ -9,4 +9,8 @@ def loveStory(s):
 
     print(count);  
 
-loveStory("coolforsez")
+
+n = int(input())
+for i in range(0,n):
+    inp = input()
+    loveStory(inp)
