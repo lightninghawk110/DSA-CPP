@@ -1,0 +1,92 @@
+Core Containers
+vector
+set / unordered_set
+map / unordered_map
+stack
+queue / priority_queue
+🔹 2. Must-Know Complexities (Non-negotiable)
+📦 vector
+Operation	Complexity
+push_back	O(1) amortized
+pop_back	O(1)
+access	O(1)
+insert (middle)	O(n)
+🌳 set / map (ordered – uses Red-Black Tree)
+Operation	Complexity
+insert	O(log n)
+delete	O(log n)
+search	O(log n)
+⚡ unordered_map / unordered_set (hashing)
+Operation	Complexity
+insert	O(1) avg
+search	O(1) avg
+worst case	O(n)
+🧱 stack
+Operation	Complexity
+push/pop	O(1)
+🚶 queue
+Operation	Complexity
+push/pop	O(1)
+🏆 priority_queue (heap)
+Operation	Complexity
+push	O(log n)
+pop	O(log n)
+top	O(1)
+🔥 3. What Most Beginners Do Wrong
+
+❌ Learn syntax
+❌ Don’t learn complexity
+❌ Don’t know when to use what
+
+👉 Result: stuck in problems
+
+✅ 4. When to Use What (This is GOLD)
+Situation	Use
+Need fast lookup	unordered_map
+Need sorted data	set / map
+Need dynamic array	vector
+LIFO	stack
+FIFO	queue
+min/max efficiently	priority_queue
+🔍 5. Mini Practice (Based on STL)
+🧠 Problem 1
+
+Find frequency of elements in array.
+
+👉 Best DS?
+
+🧠 Problem 2
+
+Maintain elements in sorted order + no duplicates.
+
+👉 Best DS?
+
+🧠 Problem 3
+
+Get maximum element repeatedly.
+
+👉 Best DS?
+
+🔥 6. Coding Examples
+✅ Example 1: Frequency Map
+unordered_map<int,int> mp;
+
+for(int x : arr) {
+    mp[x]++;
+}
+
+👉 Complexity: O(n)
+
+✅ Example 2: Remove duplicates + sort
+set<int> s(arr.begin(), arr.end());
+
+👉 Complexity: O(n log n)
+
+✅ Example 3: Max Heap
+priority_queue<int> pq;
+
+pq.push(10);
+pq.push(5);
+pq.push(20);
+
+cout << pq.top(); // 20
