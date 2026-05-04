@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void mergeS(vector<int> &arr, int low, int mid, int high)
+void mergeS(int arr[], int low, int mid, int high)
 {
-
     vector<int> v;
     int left = low;
     int right = mid + 1;
@@ -36,12 +35,17 @@ void mergeS(vector<int> &arr, int low, int mid, int high)
 
     for (int i = low; i <= high; i++)
     {
-        arr[i] = v[i];
+        arr[i] = v[i - low]; // here, we need to access the elements of vector v from index 0, so we use i-low to get the correct index in vector v as low can be others in recursive calls.
     }
 }
-
-void mergeSort(vector<int> &arr, int low, int high)
+void mergeSort(int arr[], int low, int high)
 {
+
+    if (low >= high)
+    {
+        return;
+    }
+
     int mid = (low + high) / 2;
     mergeSort(arr, low, mid);
     mergeSort(arr, mid + 1, high);
@@ -52,7 +56,7 @@ int main()
 {
     int n;
     cin >> n;
-    vector<int> arr(n);
+    int arr[n];
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
